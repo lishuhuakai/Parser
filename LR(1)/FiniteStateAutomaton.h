@@ -40,9 +40,11 @@ private:
 private:
 	void subsetAlgorithm(statusPtr&, map<wstring, statusPtr>&, queue<statusPtr>&);
 	statusPtr constructNewStation(symbolPtr&, symbolPtr&, map<wstring, statusPtr>&, queue<statusPtr>&);
-	void status2Station(rulePtr&, int, map<wstring, statusPtr>&, queue<statusPtr>&);
+	void status2Station(statusPtr&, symbolPtr&, map<wstring, statusPtr>&, queue<statusPtr>&);
 	edgePtr constructNewEdge(statusPtr& from, statusPtr& to);
 public:
 	statusPtr constructNonDeterministicAutomaton();
+	void constructDeterministicAutomaton();
+	void printGraph();
 };
 

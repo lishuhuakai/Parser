@@ -25,6 +25,9 @@ public:
 	rulePtr getRule() {
 		return rule_;
 	}
+	symbolPtr getLookAhead() {
+		return lookAhead_;
+	}
 	bool operator<(const Item& r) const {	 /* 这个东西可能用不到,但是还是放在这里吧. */
 		if (rule_ != r.rule_)
 			return rule_ < r.rule_;

@@ -84,6 +84,7 @@ struct Edge {
 		from = e.from;
 		to = e.to;
 	}
+	friend wostream& operator<<(wostream& os, Edge& e);
 };
 
 #endif // !STATUS_H_

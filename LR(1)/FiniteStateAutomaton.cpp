@@ -1,12 +1,12 @@
 #include "FiniteStateAutomaton.h"
 #include <functional>
+using namespace std;
 
 
 FiniteStateAutomaton::FiniteStateAutomaton(Grammar& g) :
 	g_(g)
 {
 }
-
 
 FiniteStateAutomaton::~FiniteStateAutomaton()
 {
@@ -50,11 +50,43 @@ statusPtr FiniteStateAutomaton::constructNonDeterministicAutomaton()
 
 	while (!stations.empty()) {
 		auto station = stations.front(); stations.pop();  /* 取出一个station */
-		wcout << *station << endl;
+		//wcout << *station << endl;
 		subsetAlgorithm(station, stationsMap, stations);
 	}
+	//printGraph();
 	return head;
 }
+
+
+/*
+ * status2Station 用于连接status和statioon.
+ */
+ void FiniteStateAutomaton::status2Station(statusPtr& s, symbolPtr& lookAhead, map<wstring, statusPtr>& sm, queue<statusPtr>& sq)
+ {
+	 auto it = s->getFirstItem();
+	 rulePtr r = it.getRule();
+	 size_t pos = it.getPos();
+	 size_t size = r->rightHandLength();
+	 symbolPtr first;
+	 symbolPtr second;
+	 if (pos < size) {
+		 first = r->findNthElem(pos);
+		 if (pos < size - 1)
+			 second = r->findNthElem(pos + 1);
+		 else
+			 second = lookAhead;
+
+		 if (first->isNonTerminal() && !second->isNonTerminal()) {
+			 statusPtr st = constructNewStation(first, second, sm, sq);
+			 constructNewEdge(s, st);
+		 }
+		 else if (first->isNonTerminal() && second->isNonTerminal()) {
+			 assert(0);
+			 // todo
+		 }
+
+	 }
+ }
 
 /*
  * subsetAlgorithm 子集构造算法.
@@ -70,10 +102,8 @@ void FiniteStateAutomaton::subsetAlgorithm(statusPtr& station, map<wstring, stat
 		first = r->findNthElem(0);
 		statusPtr fs = makeNewStat(Item(r, 0, lookAhead));
 		status.push(fs);
-		if (first->isNonTerminal()) {
-			statusPtr st = constructNewStation(first, second, stationsMap, stations);
-			constructNewEdge(fs, st);	/* 构成ε边 */
-		}
+		constructNewEdge(station, fs);
+		status2Station(fs, lookAhead, stationsMap, stations);
 	}
 
 	while (!status.empty()) {
@@ -91,20 +121,7 @@ void FiniteStateAutomaton::subsetAlgorithm(statusPtr& station, map<wstring, stat
 			symbolPtr currentSymbol = r->findNthElem(nextPos - 1);
 			auto e = constructNewEdge(stat, newStat);
 			e->matchContent.push_back(currentSymbol);
-			if (nextPos < size) { /* 在pos之后至少存在两个符号 */
-				if (nextPos < size - 1) {
-					first = r->findNthElem(nextPos);
-					second = r->findNthElem(nextPos + 1);
-				}
-				else {
-					first = r->findNthElem(nextPos);
-					second = lookAhead;
-				}
-				if (first->isNonTerminal() && second->isTerminal()) { /* 需要构建station */
-					statusPtr st = constructNewStation(first, second, stationsMap, stations);
-					constructNewEdge(newStat, st);
-				}
-			}
+			status2Station(newStat, lookAhead, stationsMap, stations);
 		}
 	}
 }
@@ -127,9 +144,6 @@ statusPtr FiniteStateAutomaton::constructNewStation(symbolPtr& first, symbolPtr&
 	return st;
 }
 
- void FiniteStateAutomaton::status2Station(rulePtr &, int, map<wstring, statusPtr>&, queue<statusPtr>&)
- {
- }
 
 edgePtr FiniteStateAutomaton::constructNewEdge(statusPtr& from, statusPtr& to)
 {
@@ -139,4 +153,34 @@ edgePtr FiniteStateAutomaton::constructNewEdge(statusPtr& from, statusPtr& to)
 	return e;
 }
 
+/*
+ * printGraph 用于输出所有的status和edge
+ */
+void FiniteStateAutomaton::printGraph() {
+	wcout << L"<<<<<<<<<<<<<<<<<<<<<<<<<<<" << endl;
+	wcout << L"Status:" << endl;
+	for (auto pr : allStatus_) {
+		auto status(pr.second.lock());
+		if (status) {
+			wcout << *status << endl;
+		}
+	}
+	wcout << L"Edges:" << endl;
+	for (auto pr : allEdges_) {
+		auto edge(pr.second.lock());
+		if (edge) {
+			wcout << *edge << endl;
+		}
+		wcout << endl;
+	}
+	wcout << L">>>>>>>>>>>>>>>>>>>>>>>>>>>" << endl;
+}
 
+//////////////////////////////////////////Deterministic Automaton///////////////////////////////////////////
+/*
+ * constructDeterministicAutomaton 构建确定性自动机.
+ */
+void FiniteStateAutomaton::constructDeterministicAutomaton()
+{
+
+}
