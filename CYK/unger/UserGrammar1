@@ -1,0 +1,6 @@
+# This is an LL(inf) grammar
+S : A
+A : (A]
+A : B
+B : (B)
+B :

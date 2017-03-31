@@ -1,0 +1,9 @@
+# 
+Start : a Bplus
+Start : b Aplus
+Aplus : a
+Aplus : a Start
+Aplus : b Aplus Aplus
+Bplus : b
+Bplus : b Start
+Bplus : a Bplus Bplus

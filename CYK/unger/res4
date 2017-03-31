@@ -1,0 +1,407 @@
+Parsing "())" of length 3
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> L S R
+Trying rule goal lhs = L, pos = 0, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 0, length = 0, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 2, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 3, rule: R -> )
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 0, length = 1, rule: L -> (
+Trying rule goal lhs = S, pos = 1, length = 0, rule: S -> L S R
+Trying rule goal lhs = L, pos = 1, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 1, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 0, rule: R -> )
+Trying rule goal lhs = L, pos = 0, length = 1, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 2, length = 0, rule: R -> )
+Trying rule goal lhs = R, pos = 2, length = 1, rule: R -> )
+Parsing found:
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+
+Trying rule goal lhs = S, pos = 1, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 1, length = 1, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 1, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 2, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 2, rule: R -> )
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> 
+R -> )
+R -> )
+
+Trying rule goal lhs = S, pos = 1, length = 2, rule: S -> L S R
+Trying rule goal lhs = R, pos = 3, length = 0, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 2, rule: S -> 
+Trying rule goal lhs = L, pos = 1, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 2, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 3, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 3, rule: L -> 
+2 derivations found for string "())"
+
+Parsing "((()))))" of length 8
+Trying rule goal lhs = S, pos = 0, length = 8, rule: S -> L S R
+Trying rule goal lhs = L, pos = 0, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 0, length = 0, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 2, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 3, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 4, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 5, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 6, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 7, rule: R -> )
+Trying rule goal lhs = R, pos = 0, length = 8, rule: R -> )
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 0, length = 1, rule: L -> (
+Trying rule goal lhs = S, pos = 1, length = 0, rule: S -> L S R
+Trying rule goal lhs = L, pos = 1, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 1, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 0, rule: R -> )
+Trying rule goal lhs = L, pos = 0, length = 1, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 1, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 1, length = 1, rule: L -> (
+Trying rule goal lhs = S, pos = 2, length = 0, rule: S -> L S R
+Trying rule goal lhs = L, pos = 2, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 2, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 0, rule: R -> )
+Trying rule goal lhs = L, pos = 1, length = 1, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 2, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 2, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 2, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 2, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 1, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 2, length = 1, rule: L -> (
+Trying rule goal lhs = S, pos = 3, length = 0, rule: S -> L S R
+Trying rule goal lhs = L, pos = 3, length = 0, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 0, rule: L -> 
+Trying rule goal lhs = S, pos = 3, length = 0, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 0, rule: R -> )
+Trying rule goal lhs = L, pos = 2, length = 1, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 2, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 3, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 3, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 4, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 4, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 3, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 3, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 3, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 2, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 2, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 2, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 4, length = 0, rule: R -> )
+Trying rule goal lhs = S, pos = 3, length = 1, rule: S -> L S R
+Trying rule goal lhs = S, pos = 3, length = 1, rule: S -> 
+Trying rule goal lhs = L, pos = 3, length = 1, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 1, rule: L -> 
+Trying rule goal lhs = L, pos = 2, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 2, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 3, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 3, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 4, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 4, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 5, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 5, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 4, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 4, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 4, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 3, rule: R -> )
+Trying rule goal lhs = R, pos = 4, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 5, length = 0, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 3, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 3, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 2, rule: R -> )
+Trying rule goal lhs = S, pos = 3, length = 2, rule: S -> L S R
+Trying rule goal lhs = S, pos = 3, length = 2, rule: S -> 
+Trying rule goal lhs = L, pos = 3, length = 2, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 2, rule: L -> 
+Trying rule goal lhs = L, pos = 2, length = 3, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 3, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 4, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 4, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 5, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 5, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 6, rule: S -> L S R
+Trying rule goal lhs = S, pos = 0, length = 6, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 5, rule: R -> )
+Trying rule goal lhs = R, pos = 5, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 6, length = 0, rule: R -> )
+Trying rule goal lhs = R, pos = 6, length = 1, rule: R -> )
+Trying rule goal lhs = R, pos = 6, length = 2, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 5, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 5, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 4, rule: R -> )
+Trying rule goal lhs = R, pos = 4, length = 2, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 4, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 4, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 3, rule: R -> )
+Trying rule goal lhs = S, pos = 3, length = 3, rule: S -> L S R
+Trying rule goal lhs = S, pos = 3, length = 3, rule: S -> 
+Trying rule goal lhs = L, pos = 3, length = 3, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 3, rule: L -> 
+Trying rule goal lhs = L, pos = 2, length = 4, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 4, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 5, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 5, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 6, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 6, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 7, rule: S -> L S R
+Trying rule goal lhs = R, pos = 7, length = 0, rule: R -> )
+Trying rule goal lhs = R, pos = 7, length = 1, rule: R -> )
+Parsing found:
+S -> L S R
+L -> 
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Trying rule goal lhs = S, pos = 0, length = 7, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 6, rule: R -> )
+Trying rule goal lhs = R, pos = 5, length = 2, rule: R -> )
+Parsing found:
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Trying rule goal lhs = S, pos = 1, length = 6, rule: S -> L S R
+Trying rule goal lhs = S, pos = 1, length = 6, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 5, rule: R -> )
+Trying rule goal lhs = R, pos = 4, length = 3, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 5, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 5, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 4, rule: R -> )
+Trying rule goal lhs = S, pos = 3, length = 4, rule: S -> L S R
+Trying rule goal lhs = S, pos = 3, length = 4, rule: S -> 
+Trying rule goal lhs = L, pos = 3, length = 4, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 4, rule: L -> 
+Trying rule goal lhs = L, pos = 2, length = 5, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 5, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 6, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 6, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 7, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 7, rule: L -> 
+Trying rule goal lhs = S, pos = 0, length = 8, rule: S -> 
+Trying rule goal lhs = R, pos = 1, length = 7, rule: R -> )
+Trying rule goal lhs = R, pos = 5, length = 3, rule: R -> )
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Parsing found:
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> (
+S -> L S R
+L -> 
+S -> L S R
+L -> 
+S -> 
+R -> )
+R -> )
+R -> )
+R -> )
+R -> )
+
+Trying rule goal lhs = S, pos = 1, length = 7, rule: S -> L S R
+Trying rule goal lhs = R, pos = 8, length = 0, rule: R -> )
+Trying rule goal lhs = S, pos = 1, length = 7, rule: S -> 
+Trying rule goal lhs = R, pos = 2, length = 6, rule: R -> )
+Trying rule goal lhs = R, pos = 4, length = 4, rule: R -> )
+Trying rule goal lhs = S, pos = 2, length = 6, rule: S -> L S R
+Trying rule goal lhs = S, pos = 2, length = 6, rule: S -> 
+Trying rule goal lhs = R, pos = 3, length = 5, rule: R -> )
+Trying rule goal lhs = S, pos = 3, length = 5, rule: S -> L S R
+Trying rule goal lhs = S, pos = 3, length = 5, rule: S -> 
+Trying rule goal lhs = L, pos = 3, length = 5, rule: L -> (
+Trying rule goal lhs = L, pos = 3, length = 5, rule: L -> 
+Trying rule goal lhs = L, pos = 2, length = 6, rule: L -> (
+Trying rule goal lhs = L, pos = 2, length = 6, rule: L -> 
+Trying rule goal lhs = L, pos = 1, length = 7, rule: L -> (
+Trying rule goal lhs = L, pos = 1, length = 7, rule: L -> 
+Trying rule goal lhs = L, pos = 0, length = 8, rule: L -> (
+Trying rule goal lhs = L, pos = 0, length = 8, rule: L -> 
+10 derivations found for string "((()))))"
+

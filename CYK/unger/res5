@@ -1,0 +1,185 @@
+Parsing "aababbab" of length 8
+Trying rule goal lhs = Start, pos = 0, length = 8, rule: Start -> a Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 1, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 2, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 2, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 2, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 2, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 1, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 0, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 0, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 3, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 3, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 3, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 3, length = 1, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 4, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 4, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 4, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 2, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 2, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 1, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 1, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 2, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 4, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 4, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 4, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 3, length = 2, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 2, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 2, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 4, length = 1, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 5, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 5, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 5, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 4, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 5, length = 0, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 5, length = 0, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 4, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 3, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 3, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 2, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 2, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 3, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 5, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 5, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 5, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 3, length = 3, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 3, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 3, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 5, length = 1, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 5, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 6, length = 0, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 6, length = 0, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 5, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 4, length = 2, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 4, length = 2, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 5, length = 1, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 5, length = 1, rule: Start -> b Aplus
+Trying rule goal lhs = Aplus, pos = 6, length = 0, rule: Aplus -> a
+Trying rule goal lhs = Aplus, pos = 6, length = 0, rule: Aplus -> a Start
+Trying rule goal lhs = Aplus, pos = 6, length = 0, rule: Aplus -> b Aplus Aplus
+Trying rule goal lhs = Bplus, pos = 4, length = 2, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 4, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 4, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 3, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 3, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 4, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 6, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 6, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 6, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 3, length = 4, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 4, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 4, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 5, length = 2, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 5, length = 2, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 6, length = 1, rule: Start -> a Bplus
+Trying rule goal lhs = Bplus, pos = 7, length = 0, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 7, length = 0, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 7, length = 0, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Start, pos = 6, length = 1, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 5, length = 2, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 4, length = 3, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 4, length = 3, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 5, length = 2, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 5, length = 2, rule: Start -> b Aplus
+Trying rule goal lhs = Aplus, pos = 6, length = 1, rule: Aplus -> a
+Trying rule goal lhs = Aplus, pos = 6, length = 1, rule: Aplus -> a Start
+Trying rule goal lhs = Start, pos = 7, length = 0, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 7, length = 0, rule: Start -> b Aplus
+Trying rule goal lhs = Aplus, pos = 6, length = 1, rule: Aplus -> b Aplus Aplus
+Trying rule goal lhs = Bplus, pos = 4, length = 3, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 2, length = 5, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 5, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 4, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 4, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 5, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 1, length = 7, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 1, length = 7, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 1, length = 7, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 3, length = 5, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 3, length = 5, rule: Bplus -> b Start
+Trying rule goal lhs = Bplus, pos = 3, length = 5, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Bplus, pos = 5, length = 3, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 5, length = 3, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 6, length = 2, rule: Start -> a Bplus
+Trying rule goal lhs = Bplus, pos = 7, length = 1, rule: Bplus -> b
+Parsing found:
+Start -> a Bplus
+Bplus -> a Bplus Bplus
+Bplus -> b
+Bplus -> a Bplus Bplus
+Bplus -> b
+Bplus -> b Start
+Start -> a Bplus
+Bplus -> b
+
+Trying rule goal lhs = Bplus, pos = 7, length = 1, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 8, length = 0, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 8, length = 0, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 7, length = 1, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Start, pos = 6, length = 2, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 5, length = 3, rule: Bplus -> a Bplus Bplus
+Parsing found:
+Start -> a Bplus
+Bplus -> a Bplus Bplus
+Bplus -> b
+Bplus -> a Bplus Bplus
+Bplus -> b Start
+Start -> b Aplus
+Aplus -> a
+Bplus -> b
+
+Trying rule goal lhs = Bplus, pos = 4, length = 4, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 4, length = 4, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 5, length = 3, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 5, length = 3, rule: Start -> b Aplus
+Trying rule goal lhs = Aplus, pos = 6, length = 2, rule: Aplus -> a
+Trying rule goal lhs = Aplus, pos = 6, length = 2, rule: Aplus -> a Start
+Trying rule goal lhs = Start, pos = 7, length = 1, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 7, length = 1, rule: Start -> b Aplus
+Trying rule goal lhs = Aplus, pos = 8, length = 0, rule: Aplus -> a
+Trying rule goal lhs = Aplus, pos = 8, length = 0, rule: Aplus -> a Start
+Trying rule goal lhs = Aplus, pos = 8, length = 0, rule: Aplus -> b Aplus Aplus
+Trying rule goal lhs = Aplus, pos = 6, length = 2, rule: Aplus -> b Aplus Aplus
+Trying rule goal lhs = Bplus, pos = 4, length = 4, rule: Bplus -> a Bplus Bplus
+Parsing found:
+Start -> a Bplus
+Bplus -> a Bplus Bplus
+Bplus -> b Start
+Start -> a Bplus
+Bplus -> b
+Bplus -> b Start
+Start -> a Bplus
+Bplus -> b
+
+Parsing found:
+Start -> a Bplus
+Bplus -> a Bplus Bplus
+Bplus -> b Start
+Start -> a Bplus
+Bplus -> b Start
+Start -> b Aplus
+Aplus -> a
+Bplus -> b
+
+Trying rule goal lhs = Bplus, pos = 2, length = 6, rule: Bplus -> b
+Trying rule goal lhs = Bplus, pos = 2, length = 6, rule: Bplus -> b Start
+Trying rule goal lhs = Start, pos = 3, length = 5, rule: Start -> a Bplus
+Trying rule goal lhs = Start, pos = 3, length = 5, rule: Start -> b Aplus
+Trying rule goal lhs = Bplus, pos = 2, length = 6, rule: Bplus -> a Bplus Bplus
+Trying rule goal lhs = Start, pos = 0, length = 8, rule: Start -> b Aplus
+4 derivations found for string "aababbab"
+

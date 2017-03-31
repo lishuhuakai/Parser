@@ -1,0 +1,98 @@
+Parsing "" of length 0
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> Z A Z
+Trying rule goal lhs = Z, pos = 0, length = 0, rule: Z -> Z Y Z
+Trying rule goal lhs = Z, pos = 0, length = 0, rule: Z -> 
+Trying rule goal lhs = Y, pos = 0, length = 0, rule: Y -> Z
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 0, rule: B -> A
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> 
+Parsing found:
+S -> Z A Z
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+A -> B
+B -> A
+A -> 
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+A -> B
+B -> A
+A -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+A -> 
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+A -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> 
+A -> B
+B -> A
+A -> 
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> 
+A -> B
+B -> A
+A -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> 
+A -> 
+Z -> Z Y Z
+Z -> 
+Y -> Z
+Z -> 
+Z -> 
+
+Parsing found:
+S -> Z A Z
+Z -> 
+A -> 
+Z -> 
+
+8 derivations found for string ""
+

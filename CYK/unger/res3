@@ -1,0 +1,28 @@
+Parsing "" of length 0
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> S a
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> 
+Parsing found:
+S -> 
+
+1 derivation found for string ""
+
+Parsing "aaaa" of length 4
+Trying rule goal lhs = S, pos = 0, length = 4, rule: S -> S a
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> S a
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> 
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> S a
+Trying rule goal lhs = S, pos = 0, length = 1, rule: S -> 
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> S a
+Trying rule goal lhs = S, pos = 0, length = 2, rule: S -> 
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> S a
+Parsing found:
+S -> S a
+S -> S a
+S -> S a
+S -> S a
+S -> 
+
+Trying rule goal lhs = S, pos = 0, length = 3, rule: S -> 
+Trying rule goal lhs = S, pos = 0, length = 4, rule: S -> 
+1 derivation found for string "aaaa"
+

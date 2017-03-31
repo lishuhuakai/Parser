@@ -1,0 +1,8 @@
+# absolutely nothing, many ways
+S : Z A Z
+A : B
+B : A
+A : 
+Z : Z Y Z
+Z :
+Y : Z

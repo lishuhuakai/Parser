@@ -1,0 +1,113 @@
+Parsing "((()]]" of length 6
+Trying rule goal lhs = S, pos = 0, length = 6, rule: S -> A
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 0, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 0, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 1, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 0, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 0, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 0, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 1, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 1, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 1, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 2, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 1, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 0, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 2, length = 0, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 2, length = 0, rule: B -> 
+Trying rule goal lhs = A, pos = 1, length = 1, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 1, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 1, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 2, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 2, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 2, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 3, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 2, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 1, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 0, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 3, length = 0, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 3, length = 0, rule: B -> 
+Trying rule goal lhs = A, pos = 2, length = 1, rule: A -> B
+Trying rule goal lhs = B, pos = 2, length = 1, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 2, length = 1, rule: B -> 
+Trying rule goal lhs = A, pos = 1, length = 2, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 2, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 2, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 3, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 3, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 3, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 4, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 3, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 2, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 1, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 1, rule: A -> B
+Trying rule goal lhs = B, pos = 3, length = 1, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 3, length = 1, rule: B -> 
+Trying rule goal lhs = A, pos = 2, length = 2, rule: A -> B
+Trying rule goal lhs = B, pos = 2, length = 2, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 2, length = 2, rule: B -> 
+Trying rule goal lhs = A, pos = 1, length = 3, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 3, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 3, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 4, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 4, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 4, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 5, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 1, length = 4, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 3, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 2, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 2, rule: A -> B
+Trying rule goal lhs = B, pos = 3, length = 2, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 3, length = 2, rule: B -> 
+Trying rule goal lhs = A, pos = 2, length = 3, rule: A -> B
+Trying rule goal lhs = B, pos = 2, length = 3, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 2, length = 3, rule: B -> 
+Trying rule goal lhs = A, pos = 1, length = 4, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 4, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 4, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 5, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 5, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 5, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 6, rule: A -> ( A ]
+Parsing found:
+S -> A
+A -> ( A ]
+A -> ( A ]
+A -> B
+B -> ( B )
+B -> 
+
+Trying rule goal lhs = A, pos = 1, length = 5, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 2, length = 4, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 3, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 3, length = 3, rule: A -> B
+Trying rule goal lhs = B, pos = 3, length = 3, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 3, length = 3, rule: B -> 
+Trying rule goal lhs = A, pos = 2, length = 4, rule: A -> B
+Trying rule goal lhs = B, pos = 2, length = 4, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 2, length = 4, rule: B -> 
+Trying rule goal lhs = A, pos = 1, length = 5, rule: A -> B
+Trying rule goal lhs = B, pos = 1, length = 5, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 1, length = 5, rule: B -> 
+Trying rule goal lhs = A, pos = 0, length = 6, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 6, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 6, rule: B -> 
+1 derivation found for string "((()]]"
+
+Parsing "" of length 0
+Trying rule goal lhs = S, pos = 0, length = 0, rule: S -> A
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> ( A ]
+Trying rule goal lhs = A, pos = 0, length = 0, rule: A -> B
+Trying rule goal lhs = B, pos = 0, length = 0, rule: B -> ( B )
+Trying rule goal lhs = B, pos = 0, length = 0, rule: B -> 
+Parsing found:
+S -> A
+A -> B
+B -> 
+
+1 derivation found for string ""
+

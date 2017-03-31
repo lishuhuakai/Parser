@@ -1,0 +1,5 @@
+# This is a highly ambiguous grammar
+S : A
+A : A A
+A : a
+A :

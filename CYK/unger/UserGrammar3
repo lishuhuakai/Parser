@@ -1,0 +1,4 @@
+# This grammar requires the prediction of a number of empty strings
+# depending on the number of a"s:
+S : S a
+S :
