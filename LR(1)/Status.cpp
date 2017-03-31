@@ -22,6 +22,6 @@ wostream & operator<<(wostream & os, Edge & e)
 	if (e.isEps())
 		wcout << L"	eps" << endl;
 	else
-		wcout << L"	" << *(e.matchContent[0]) << endl;
+		wcout << L"	" << *(e.matchContent) << endl;
 	return os;
 }

@@ -3,6 +3,7 @@
 #include "Rule.h"
 #include "Symbol.h"
 #include "FiniteStateAutomaton.h"
+#include "ActionGoto.h"
 /*
  * constructGrammar 用于构建一个文法.
  */
@@ -41,9 +42,18 @@ int main() {
 	auto g = constructGrammar();
 	locale loc("chs");
 	wcout.imbue(loc);
-	//wcout << *g;
 	FiniteStateAutomaton fa(*g);
-	fa.constructDeterministicAutomaton();
+	auto table = fa.constructDeterministicAutomaton();
+	int n;
+	wchar_t ch[10];
+	while (true) {
+		wstring c;
+		wcin >> n;
+		wcin >> ch;
+		c = ch;
+		table->queryAction(n, c);
+		table->queryGoto(n, c);
+	}
 	getchar();
 	return 0;
 }

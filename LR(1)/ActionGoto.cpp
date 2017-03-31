@@ -1,8 +1,8 @@
 #include "ActionGoto.h"
+#include "Grammar.h"
 
-
-
-ActionGoto::ActionGoto()
+ActionGoto::ActionGoto(Grammar& g) :
+	g_(g)
 {
 }
 
@@ -11,26 +11,17 @@ ActionGoto::~ActionGoto()
 {
 }
 
-/*
- * printTable 用于输出表格的信息.
- */
-void ActionGoto::printTable()
+void ActionGoto::queryAction(int pos, wstring& str)
 {
-	wcout << L"status:" << endl;
-	for (auto pr : stats_) {
-		wcout << "label: " << pr.first << endl;
-		wcout << pr.second << endl;
-	}
+	symbolPtr s = g_.str2symbolPtr(str);
+	auto act = (*action_[pos])[s];
+	wcout << act << endl;
+}
 
-	wcout << L"relations:" << endl;
-	for (auto line : table_) {
-		int from = line.first;
-		for (auto row : *(line.second)) {
-			symbolPtr s = row.first;
-			wcout << L"[" << from << L"," << *s << "] " << row.second << endl;
-		}
-		wcout << endl;
-	}
+void ActionGoto::queryGoto(int pos, wstring& str)
+{
+	symbolPtr s = g_.str2symbolPtr(str);
+	wcout << (*goto_[pos])[s] << endl;
 }
 
 /*
@@ -38,12 +29,20 @@ void ActionGoto::printTable()
  */
 void ActionGoto::appendNewStat(int label, const shared_ptr<set<statusPtr>>& s)
 {
-	shared_ptr<set<Item>> itemSet = make_shared<set<Item>>();
+	itemSetPtr items = make_shared<itemSet>();
 	for (auto stat : *s) {
-		itemSet->insert(stat->items.begin(), stat->items.end());
+		items->insert(stat->items.begin(), stat->items.end());
 	}
-	stats_[label] = Record(itemSet);
-	table_[label] = make_shared<map<symbolPtr, Action>>(); /* 构建新item */
+	/* 构建一条新的映射 */
+	mapping_[label] = items;
+	action_[label] = make_shared<map<symbolPtr, Action>>();
+	goto_[label] = make_shared<map<symbolPtr, int>>();
+	/* 如果是归约项,那么要开始记录 */
+	if (isReduceItem(items)) {
+		for (auto it : *items) {
+			(*action_[label])[it.getLookAhead()] = Action(it.getRule());
+		}
+	}
 }
 
 /*
@@ -51,24 +50,23 @@ void ActionGoto::appendNewStat(int label, const shared_ptr<set<statusPtr>>& s)
  */
 void ActionGoto::recordRelations(int from, int to, symbolPtr & s)
 {
-	auto mp = table_[from];
-	(*mp)[s] = Action(Action::shift, to);
-	stats_[from].type = Record::shift; /* from方一定是移进项 */
-	symbols_.insert(s);
+	/* 这里主要用于记录移进项 */
+	(*goto_[from])[s] = to;  /* goto表记录下转换规则 */
+	if (s->isTerminal())
+		(*action_[from])[s] = Action();
+
 }
 
 /*
- * buildTable 用于完整地构建ActionGoto表.
+ * isReduceItem 判断是否是归约项
  */
-void ActionGoto::buildTable()
+bool ActionGoto::isReduceItem(itemSetPtr& its)
 {
-	for (auto record : stats_) {
-		int from = record.first;
-		Action a(Action::reduce, from);
-		if (record.second.type == Record::reduce) {
-			for (auto nt : symbols_) {
-				(*table_[from])[nt] = a;	/* 按照from状态的规则来规约 */
-			}
-		}
+	/* 归约项的特点是,每一个item的pos都达到了终点,可以进行规约啦. */
+	for (auto it : *its) {
+		if (it.getPos() != it.getRule()->rightHandLength())
+			return false;
 	}
+	return true;
 }
+

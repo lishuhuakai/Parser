@@ -60,7 +60,7 @@ private:
 	edgePtr constructNewEdge(statusPtr& from, statusPtr& to);
 public:
 	statusPtr constructNonDeterministicAutomaton();
-	void constructDeterministicAutomaton();
+	shared_ptr<ActionGoto> constructDeterministicAutomaton();
 	statusPtr eliminateEps(statusPtr&);
 	void printGraph();
 private:
@@ -69,11 +69,10 @@ private:
 	void fillContent(statusPtr &s, set<statusPtr>& sets);
 private:
 	static void getAllSymbols(shared_ptr<set<statusPtr>>& st, set<symbolPtr>& res) {
-		/* o(n^3) 效率实在不怎么样,但是优化的地步也不大 */
+		/* o(n^2) 效率实在不怎么样,但是优化的地步也不大 */
 		for (auto status : (*st)) {						/* 对于每一个状态 */
 			for (auto edge : (*status).outEdges) {		/* 对于每一条出边 */
-				for (auto i : edge->matchContent)
-					res.insert(i);
+				res.insert(edge->matchContent);
 			}
 		}
 	}

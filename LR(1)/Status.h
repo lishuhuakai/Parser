@@ -66,12 +66,12 @@ struct Status {
  */
 struct Edge {
 	int label;
-	vector<symbolPtr> matchContent;
+	symbolPtr matchContent;
 	statusPtr from;
 	statusPtr to;
 
 	bool isEps() { /* ÅÐ¶Ï±ßÊÇ·ñÎª¦Å±ß */
-		return matchContent.size() == 0;
+		return matchContent == nullptr;
 	}
 
 	Edge(int id, const statusPtr& f, const statusPtr& t) :

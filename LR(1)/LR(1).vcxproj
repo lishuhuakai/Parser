@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ActionGoto.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="FiniteStateAutomaton.h" />
     <ClInclude Include="Grammar.h" />
@@ -120,6 +121,7 @@
     <ClInclude Include="Symbol.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ActionGoto.cpp" />
     <ClCompile Include="FiniteStateAutomaton.cpp" />
     <ClCompile Include="Grammar.cpp" />
     <ClCompile Include="Item.cpp" />

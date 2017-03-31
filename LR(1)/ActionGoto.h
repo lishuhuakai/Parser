@@ -7,76 +7,51 @@
  */
 class ActionGoto
 {
-	friend class Dfa;
+	friend class FiniteStateAutomaton;
 public:
-	ActionGoto();
+	ActionGoto(Grammar&);
+public:
 	~ActionGoto();
 public:
-	void printTable();
-private:
 	struct Action {
-		enum Type { shift, reduce, error};
+		enum Type { kShift, kReduce};
 		Type type;
-		int status;		/* 用于记录到达哪一个状态 */
+		rulePtr rule;
 		Action() :
-			type(error), status(-1)
+			type(kShift)
 		{}
-		Action(Type t, int s) :
-			type(t), status(s)
+		Action(rulePtr& r) :
+			type(kReduce), rule(r)
 		{}
-		friend wostream& operator<<(wostream& os, Action& it) {
-			switch (it.type)
+		friend wostream& operator<<(wostream& os, Action& act) {
+			switch (act.type)
 			{
-			case shift:
+			case kShift:
 				os << L"s";
 				break;
-			case reduce:
-				os << L"r";
-				break;
-			case error:
-				os << L"e";
+			case kReduce:
+				os << L"r " << *act.rule;
 				break;
 			default:
 				break;
 			}
-			os << it.status << endl;
 			return os;
 		}
 	};
-
-	struct Record {
-		enum Type {shift, reduce};
-		Type type;
-		shared_ptr<set<Item>> items;
-
-		Record(const shared_ptr<set<Item>>& it) :
-			items(it), type(reduce)
-		{}
-		Record(const Record& r) {
-			type = r.type;
-			items = r.items;
-		}
-		Record():
-			type(reduce)
-		{}
-		friend wostream& operator<<(wostream& os, Record& r) {
-			if (r.type == shift)
-				os << "shift Item" << endl;
-			else
-				os << "reduce Item" << endl;
-			for (auto it : *(r.items)) {
-				os << it << endl;
-			}
-			return os;
-		}
-	};
+public:
+	void queryAction(int pos, wstring&);
+	void queryGoto(int pos, wstring&);
+private:
+	typedef set<Item> itemSet;
+	typedef shared_ptr<set<Item>> itemSetPtr;
+	set<symbolPtr> symbols_;		/* 记录非终结符 */
+	map<int, itemSetPtr> mapping_;			/* 用于记录label到Item的映射 */
+	map<int, shared_ptr<map<symbolPtr, Action>>> action_;
+	map<int, shared_ptr<map<symbolPtr, int>>> goto_;
+	Grammar& g_;
 private:
 	void appendNewStat(int label,const shared_ptr<set<statusPtr>>& s);
 	void recordRelations(int from, int to, symbolPtr& s);
-	void buildTable();
-private:
-	map<int, Record> stats_;
-	set<symbolPtr> symbols_;		/* 记录非终结符 */
-	map<int, shared_ptr<map<symbolPtr, Action>>> table_;
+	bool isReduceItem(itemSetPtr&);
 };
 

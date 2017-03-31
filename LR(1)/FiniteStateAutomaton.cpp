@@ -1,4 +1,5 @@
 #include "FiniteStateAutomaton.h"
+#include "ActionGoto.h"
 #include <functional>
 using namespace std;
 
@@ -120,7 +121,7 @@ void FiniteStateAutomaton::subsetAlgorithm(statusPtr& station, map<wstring, stat
 			/* 添加新边 */
 			symbolPtr currentSymbol = r->findNthElem(nextPos - 1);
 			auto e = constructNewEdge(stat, newStat);
-			e->matchContent.push_back(currentSymbol);
+			e->matchContent = currentSymbol;
 			status2Station(newStat, lookAhead, stationsMap, stations);
 		}
 	}
@@ -180,17 +181,17 @@ void FiniteStateAutomaton::printGraph() {
 /*
  * constructDeterministicAutomaton 构建确定性自动机.
  */
-void FiniteStateAutomaton::constructDeterministicAutomaton()
+shared_ptr<ActionGoto> FiniteStateAutomaton::constructDeterministicAutomaton()
 {
 	auto head = constructNonDeterministicAutomaton();
 	head = eliminateEps(head);
-	//shared_ptr<ActionGoto> table = make_shared<ActionGoto>();
+	shared_ptr<ActionGoto> table = make_shared<ActionGoto>(g_);
 	queue<newStatusPtr> l;			/* 队列l */
 	set<newStatusPtr, Compare> d;	/* 集合d */
 	/* 首先将起始状态放入l和d中 */
 	statusSetPtr oldStatusSet = make_shared<set<statusPtr>>();
 	oldStatusSet->insert(head);	/* 从起始状态出发 */
-	//table->appendNewStat(0, oldStatusSet); /* 添加起始状态 */
+	table->appendNewStat(0, oldStatusSet); /* 添加起始状态 */
 	newStatusPtr startPtr = make_shared<NewStatus>(oldStatusSet, assignNewStatusLabel());
 	d.insert(startPtr);
 	l.push(startPtr);
@@ -207,7 +208,7 @@ void FiniteStateAutomaton::constructDeterministicAutomaton()
 			bool finalTransfer = false;
 			for (auto oldStatus : *s->oldStatusSet) {			/* 对于组成新节点的每个旧节点 */
 				for (auto edge : oldStatus->outEdges) {			/* 遍历每一条出边 */
-					if (findElement(edge->matchContent, sm)) {	/* 如果能够匹配的话 */
+					if (edge->matchContent == sm) {	/* 如果能够匹配的话 */
 						oldStatusSet->insert(edge->to);
 					}
 				}
@@ -221,19 +222,19 @@ void FiniteStateAutomaton::constructDeterministicAutomaton()
 				toLabel = (*pos)->label;
 			}
 			else { /* 如果不存在的话,需要重新非配一个label */
-				//toLabel = assignNewStatusLabel();
-				//table->appendNewStat(toLabel, oldStatusSet);
+				toLabel = assignNewStatusLabel();
+				table->appendNewStat(toLabel, oldStatusSet);
 				newStatus->label = toLabel;
 				d.insert(newStatus);
 				l.push(newStatus);
 			}
-			//table->recordRelations(s->label, toLabel, sm);	/* 添加关系 */
+			table->recordRelations(s->label, toLabel, sm);	/* 添加关系 */
 		}
 	}
 	//nfa_.clearEnv();
-	//table->buildTable();
 	//return table;
-	wcout << "nice!";
+	//wcout << "nice!";
+	return table;
 }
 
 //////////////////////////////////////// Eliminate Eps Edge////////////////////////////////////////////////////
@@ -363,6 +364,6 @@ statusPtr FiniteStateAutomaton::eliminateEps(statusPtr& head) {
 		stat->inEdges.clear();
 	}
 	notEffectStatus.clear();
-	printGraph();
+	//printGraph();
 	return head;			/* 开始节点始终是开始节点 */
 }
