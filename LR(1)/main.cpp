@@ -43,7 +43,7 @@ int main() {
 	wcout.imbue(loc);
 	//wcout << *g;
 	FiniteStateAutomaton fa(*g);
-	fa.constructNonDeterministicAutomaton();
+	fa.constructDeterministicAutomaton();
 	getchar();
 	return 0;
 }

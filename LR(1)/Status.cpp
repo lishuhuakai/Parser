@@ -3,18 +3,12 @@
 wostream & operator<<(wostream& os, Status& s)
 {
 	os << L"label : " << s.label << endl;
-	switch (s.kind)
-	{
-	case Status::kStation:
-		os << L"¡ñ" << *s.nonTerminal << L"	" << *s.lookAheadSymbol;
-		break;
-	case Status::kStatus:
+	if (s.kind == Status::kStation)
+		os << L"* [¡ñ" << *s.nonTerminal << L"	" << *s.lookAheadSymbol << L"]" << endl;
+	if (s.items.size() != 0) {
 		for (auto it : s.items) {
-			os << it << L"	" << *it.getLookAhead();
+			os << it << L"	" << *it.getLookAhead() << endl;
 		}
-		break;
-	default:
-		break;
 	}
 	os << endl;
 	return os;
